@@ -14,9 +14,9 @@
 (() => {
   function openAllNotifications() {
     repos = document.getElementsByClassName('notifications')
-    for (repo in repos) {
-      notifications = repos[repo]
-      for (n in notifications) {
+    for (let repo in repos) {
+      notificationsList = repos[repo]
+      for (let n in notificationsList.children) {
         notification = notifications[n]
         if (notification.classList.contains('js-notification')) {
           notificationURL = notification.querySelector('a.list-group-item-link').href
